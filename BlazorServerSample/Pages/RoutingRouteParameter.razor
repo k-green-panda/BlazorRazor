@@ -1,0 +1,16 @@
+﻿@page "/RouteParameter"
+@page "/RouteParameter/{text}"
+@page "/RouteParameter/{id:int}"
+
+<h3>RoutingRouteParameter</h3>
+
+<p>@Text</p>
+<p>@Id</p>
+
+@code{
+    [Parameter]
+    public string Text { get; set; }
+
+    [Parameter]
+    public int Id { get; set; }
+}

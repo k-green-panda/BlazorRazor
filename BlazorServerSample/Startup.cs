@@ -54,6 +54,7 @@ namespace BlazorServerSample
             {
                 endpoints.MapBlazorHub();
                 endpoints.MapFallbackToPage("/_Host");
+                //endpoints.MapFallbackToPage("/routingallowpathincludingfilename/{param?}", "/_Host");
             });
         }
     }

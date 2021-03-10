@@ -1,0 +1,15 @@
+﻿@page "/routingallowpathincludingfilename"
+@page "/routingallowpathincludingfilename/{param}"
+
+<h3>RoutingAllowPathIncludingFileName</h3>
+
+<p>@Param</p>
+
+@code {
+    [Parameter]
+    public string Param { get; set; }
+
+    // Startup.csに下記コードを追加することでルートパラメータにファイル名を指定可能。
+    // 下記コードがない場合は、NotFoundになる。
+    // endpoints.MapFallbackToPage("/routingallowpathincludingfilename/{param?}", "/_Host");
+}
